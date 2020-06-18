@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save</title>
+</head>
+
+<body>
+    <h3>
+        All fields are validated!>
+    </h3>
+    <form action="/" method="post" th:object="${user}">
+        <input type="text" th:field="*{username}" placeholder="username" disabled>
+        <input type="tel" th:field="*{contactNumber}" placeholder="contactNumber" disabled>
+    </form>
+</body>
+
+</html>

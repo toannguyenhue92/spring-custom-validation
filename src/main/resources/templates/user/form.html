@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+</head>
+
+<body>
+    <form action="/" method="post" th:object="${user}">
+        <input type="text" th:field="*{username}" placeholder="username">
+        <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">username</td>
+        <input type="tel" th:field="*{contactNumber}" placeholder="contactNumber">
+        <td th:if="${#fields.hasErrors('contactNumber')}" th:errors="*{contactNumber}">contactNumber</td>
+        <input type="submit" value="save">
+    </form>
+</body>
+
+</html>

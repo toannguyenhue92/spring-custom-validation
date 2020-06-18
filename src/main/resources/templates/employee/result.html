@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        All fields are validated!>
+    </h3>
+    <form th:object="${employee}">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" th:field="*{firstName}" placeholder="firstName" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" th:field="*{lastName}" placeholder="lastName" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="tel" th:field="*{contactNumber}" placeholder="contactNumber" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" th:field="*{age}" placeholder="age" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" th:field="*{email}" placeholder="email" disabled>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
